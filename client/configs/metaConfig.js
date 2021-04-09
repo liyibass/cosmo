@@ -7,4 +7,4 @@ export const SITE_DOMAIN = `${app.domain}${app.base}`
 export const SITE_OG_IMAGE = `${app.siteProtocol}://${app.domain}${app.base}/images/og.png`
 export const SITE_LOGO = `${app.siteProtocol}://${app.domain}${app.base}/images/logo.png`
 export const SITE_BASE = `${app.base}/`
-export const FB_APP_ID = `ocean`
+export const FB_APP_ID = `YOYO`
