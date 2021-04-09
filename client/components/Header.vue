@@ -100,7 +100,7 @@ export default {
         {
           id: 5,
           name: '其他社群',
-          engName: 'SOCIAL',
+          engName: 'Social',
           link: '/',
           list: [
             {

@@ -47,12 +47,13 @@ export default {
 <style lang="scss" scoped>
 .nav-item {
   position: relative;
-  padding: 10px 33px;
-  font-size: 16px;
-  cursor: pointer;
   width: calc(100% / 8);
-  text-align: center;
+  padding: 10px 33px;
   background: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
   &:hover {
     background: $color-grey;
   }
@@ -65,8 +66,9 @@ export default {
     background: white;
     &_item {
       text-align: center;
-      padding: 5px 0;
+      padding: 10px 0;
       opacity: 0.8;
+      font-size: 12px;
       &:hover {
         background: $color-grey;
       }
