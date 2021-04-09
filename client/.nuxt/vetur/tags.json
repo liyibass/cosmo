@@ -34,5 +34,11 @@
   },
   "LazyScrollamaExample": {
     "description": "Auto imported from /components/ScrollamaExample.vue"
+  },
+  "Slideshow": {
+    "description": "Auto imported from /components/Slideshow.vue"
+  },
+  "LazySlideshow": {
+    "description": "Auto imported from /components/Slideshow.vue"
   }
 }

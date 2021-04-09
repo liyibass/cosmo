@@ -4,6 +4,7 @@ export { default as HeaderMetaList } from '../../components/HeaderMetaList.vue'
 export { default as HeaderNavList } from '../../components/HeaderNavList.vue'
 export { default as HeaderNavListItem } from '../../components/HeaderNavListItem.vue'
 export { default as ScrollamaExample } from '../../components/ScrollamaExample.vue'
+export { default as Slideshow } from '../../components/Slideshow.vue'
 
 export const LazyFooter = import('../../components/Footer.vue' /* webpackChunkName: "components/footer" */).then(c => c.default || c)
 export const LazyHeader = import('../../components/Header.vue' /* webpackChunkName: "components/header" */).then(c => c.default || c)
@@ -11,3 +12,4 @@ export const LazyHeaderMetaList = import('../../components/HeaderMetaList.vue' /
 export const LazyHeaderNavList = import('../../components/HeaderNavList.vue' /* webpackChunkName: "components/header-nav-list" */).then(c => c.default || c)
 export const LazyHeaderNavListItem = import('../../components/HeaderNavListItem.vue' /* webpackChunkName: "components/header-nav-list-item" */).then(c => c.default || c)
 export const LazyScrollamaExample = import('../../components/ScrollamaExample.vue' /* webpackChunkName: "components/scrollama-example" */).then(c => c.default || c)
+export const LazySlideshow = import('../../components/Slideshow.vue' /* webpackChunkName: "components/slideshow" */).then(c => c.default || c)

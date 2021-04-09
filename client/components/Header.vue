@@ -133,7 +133,7 @@ export default {
           list: [],
         },
         {
-          id: 0,
+          id: 7,
           name: '檔期預約',
           engName: 'Booking',
           link: '/',
@@ -173,7 +173,8 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  //   height: 100px;
+  z-index: 900;
+  position: relative;
   padding: 10px 30px;
 
   &__logo {
