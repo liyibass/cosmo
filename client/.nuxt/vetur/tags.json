@@ -1,4 +1,34 @@
 {
+  "Footer": {
+    "description": "Auto imported from /components/Footer.vue"
+  },
+  "LazyFooter": {
+    "description": "Auto imported from /components/Footer.vue"
+  },
+  "Header": {
+    "description": "Auto imported from /components/Header.vue"
+  },
+  "LazyHeader": {
+    "description": "Auto imported from /components/Header.vue"
+  },
+  "HeaderMetaList": {
+    "description": "Auto imported from /components/HeaderMetaList.vue"
+  },
+  "LazyHeaderMetaList": {
+    "description": "Auto imported from /components/HeaderMetaList.vue"
+  },
+  "HeaderNavList": {
+    "description": "Auto imported from /components/HeaderNavList.vue"
+  },
+  "LazyHeaderNavList": {
+    "description": "Auto imported from /components/HeaderNavList.vue"
+  },
+  "HeaderNavListItem": {
+    "description": "Auto imported from /components/HeaderNavListItem.vue"
+  },
+  "LazyHeaderNavListItem": {
+    "description": "Auto imported from /components/HeaderNavListItem.vue"
+  },
   "ScrollamaExample": {
     "description": "Auto imported from /components/ScrollamaExample.vue"
   },

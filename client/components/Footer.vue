@@ -1,5 +1,5 @@
 <template>
-  <div class="homepage">home</div>
+  <div class="footer">footer</div>
 </template>
 
 <script>
@@ -7,7 +7,7 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-.homepage {
-  font-size: 1rem;
+.footer {
+  height: 400px;
 }
 </style>

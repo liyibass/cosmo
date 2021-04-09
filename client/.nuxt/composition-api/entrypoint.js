@@ -481,7 +481,7 @@ const globalPlugin = (context) => {
   };
 };
 
-const staticPath = "/Users/mac/Documents/LiyiCoding/liyiNuxtTemp/client/.nuxt/static-json";
+const staticPath = "/Users/mac/Documents/LiyiCoding/cosmo/client/.nuxt/static-json";
 const staticCache = {};
 function writeFile(key, value) {
   if (process.client || !process.static)

@@ -12,13 +12,13 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_1521e983 from 'nuxt_plugin_plugin_1521e983' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_plugin_835a9618 from 'nuxt_plugin_plugin_835a9618' // Source: ./composition-api/plugin.js (mode: 'all')
-import nuxt_plugin_apollomodule_73a6b836 from 'nuxt_plugin_apollomodule_73a6b836' // Source: ./apollo-module.js (mode: 'all')
+import nuxt_plugin_plugin_d174c5b4 from 'nuxt_plugin_plugin_d174c5b4' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_plugin_b8a6619e from 'nuxt_plugin_plugin_b8a6619e' // Source: ./composition-api/plugin.js (mode: 'all')
+import nuxt_plugin_apollomodule_3729a108 from 'nuxt_plugin_apollomodule_3729a108' // Source: ./apollo-module.js (mode: 'all')
 import nuxt_plugin_VueSmoothScroll_0808546b from 'nuxt_plugin_VueSmoothScroll_0808546b' // Source: ../plugins/VueSmoothScroll (mode: 'client')
 import nuxt_plugin_vuescrollmagic_55667396 from 'nuxt_plugin_vuescrollmagic_55667396' // Source: ../plugins/vue-scrollmagic.js (mode: 'client')
 import nuxt_plugin_vuelazyload_37761242 from 'nuxt_plugin_vuelazyload_37761242' // Source: ../plugins/vue-lazyload.js (mode: 'client')
-import nuxt_plugin_meta_fe2f6e3c from 'nuxt_plugin_meta_fe2f6e3c' // Source: ./composition-api/meta.js (mode: 'all')
+import nuxt_plugin_meta_0ce46342 from 'nuxt_plugin_meta_0ce46342' // Source: ./composition-api/meta.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -178,16 +178,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_1521e983 === 'function') {
-    await nuxt_plugin_plugin_1521e983(app.context, inject)
+  if (typeof nuxt_plugin_plugin_d174c5b4 === 'function') {
+    await nuxt_plugin_plugin_d174c5b4(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_plugin_835a9618 === 'function') {
-    await nuxt_plugin_plugin_835a9618(app.context, inject)
+  if (typeof nuxt_plugin_plugin_b8a6619e === 'function') {
+    await nuxt_plugin_plugin_b8a6619e(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_apollomodule_73a6b836 === 'function') {
-    await nuxt_plugin_apollomodule_73a6b836(app.context, inject)
+  if (typeof nuxt_plugin_apollomodule_3729a108 === 'function') {
+    await nuxt_plugin_apollomodule_3729a108(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_VueSmoothScroll_0808546b === 'function') {
@@ -202,8 +202,8 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_vuelazyload_37761242(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_meta_fe2f6e3c === 'function') {
-    await nuxt_plugin_meta_fe2f6e3c(app.context, inject)
+  if (typeof nuxt_plugin_meta_0ce46342 === 'function') {
+    await nuxt_plugin_meta_0ce46342(app.context, inject)
   }
 
   // Lock enablePreview in context
