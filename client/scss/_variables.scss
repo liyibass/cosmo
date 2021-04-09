@@ -8,10 +8,11 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px // 依照設計的 breakpoint 調整,,,,,,,,,,,,,
+  xxl: 1400px // 依照設計的 breakpoint 調整,,,,,,,,,,,,,,,,
 ) !default;
 
-$color-main-dark: rgb(149, 149, 149);
+$color-main-dark-gray: rgb(69, 69, 69);
+$color-main-light-gray: rgb(247, 247, 247);
 $color-grey: #e7e7e7;
 $color-grey-deep: #979797;
 $color-blue: #014db8;

@@ -38,12 +38,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-family: 'PingFang TC', sans-serif;
   margin-bottom: 10px;
   &__item {
     padding: 0 9px;
-    border-right: 2px solid $color-main-dark;
+    font-family: 'PingFang TC', sans-serif;
+    color: $color-main-dark-gray;
     font-size: 14px;
+    border-right: 2px solid $color-main-dark-gray;
     opacity: 0.8;
   }
 }

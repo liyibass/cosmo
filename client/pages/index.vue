@@ -9,5 +9,6 @@ export default {}
 <style lang="scss" scoped>
 .homepage {
   font-size: 1rem;
+  height: 20vh;
 }
 </style>
