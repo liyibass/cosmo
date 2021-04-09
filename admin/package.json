@@ -1,0 +1,41 @@
+{
+  "name": "@keystonejs/example-projects-nuxt",
+  "description": "A NuxtJS example project.",
+  "private": true,
+  "version": "5.0.22",
+  "author": "The KeystoneJS Development Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development DISABLE_LOGGING=true keystone dev",
+    "build": "cross-env NODE_ENV=production keystone build",
+    "start": "cross-env NODE_ENV=production  DISABLE_LOGGING=true keystone start",
+    "create-tables": "cross-env keystone create-tables",
+    "gcp-build": "keystone build",
+    "deploy": "gcloud app deploy"
+  },
+  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/create-keystone-app/example-projects/nuxt",
+  "homepage": "https://github.com/keystonejs/keystone",
+  "dependencies": {
+    "@google-cloud/storage": "^5.8.2",
+    "@keystonejs/adapter-mongoose": "^10.1.1",
+    "@keystonejs/app-admin-ui": "^7.3.13",
+    "@keystonejs/app-graphql": "^6.2.1",
+    "@keystonejs/app-static": "^5.1.3",
+    "@keystonejs/auth-password": "^6.0.0",
+    "@keystonejs/fields": "^21.1.0",
+    "@keystonejs/fields-wysiwyg-tinymce": "^5.3.14",
+    "@keystonejs/file-adapters": "^7.0.8",
+    "@keystonejs/keystone": "^19.0.0",
+    "@keystonejs/list-plugins": "^7.1.5",
+    "@keystonejs/server-side-graphql-client": "^1.1.2",
+    "core-js": "^3.8.0",
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1",
+    "firebase": "^8.2.6",
+    "nuxt": "^2.14.7",
+    "sharp": "^0.27.1"
+  }
+}
