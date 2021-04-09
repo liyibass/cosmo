@@ -3,6 +3,9 @@ export { default as Header } from '../../components/Header.vue'
 export { default as HeaderMetaList } from '../../components/HeaderMetaList.vue'
 export { default as HeaderNavList } from '../../components/HeaderNavList.vue'
 export { default as HeaderNavListItem } from '../../components/HeaderNavListItem.vue'
+export { default as HomePortfolio } from '../../components/HomePortfolio.vue'
+export { default as Recommend } from '../../components/Recommend.vue'
+export { default as RecommendCard } from '../../components/RecommendCard.vue'
 export { default as ScrollamaExample } from '../../components/ScrollamaExample.vue'
 export { default as Slideshow } from '../../components/Slideshow.vue'
 
@@ -11,5 +14,8 @@ export const LazyHeader = import('../../components/Header.vue' /* webpackChunkNa
 export const LazyHeaderMetaList = import('../../components/HeaderMetaList.vue' /* webpackChunkName: "components/header-meta-list" */).then(c => c.default || c)
 export const LazyHeaderNavList = import('../../components/HeaderNavList.vue' /* webpackChunkName: "components/header-nav-list" */).then(c => c.default || c)
 export const LazyHeaderNavListItem = import('../../components/HeaderNavListItem.vue' /* webpackChunkName: "components/header-nav-list-item" */).then(c => c.default || c)
+export const LazyHomePortfolio = import('../../components/HomePortfolio.vue' /* webpackChunkName: "components/home-portfolio" */).then(c => c.default || c)
+export const LazyRecommend = import('../../components/Recommend.vue' /* webpackChunkName: "components/recommend" */).then(c => c.default || c)
+export const LazyRecommendCard = import('../../components/RecommendCard.vue' /* webpackChunkName: "components/recommend-card" */).then(c => c.default || c)
 export const LazyScrollamaExample = import('../../components/ScrollamaExample.vue' /* webpackChunkName: "components/scrollama-example" */).then(c => c.default || c)
 export const LazySlideshow = import('../../components/Slideshow.vue' /* webpackChunkName: "components/slideshow" */).then(c => c.default || c)

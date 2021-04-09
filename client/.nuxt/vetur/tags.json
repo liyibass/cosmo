@@ -29,6 +29,24 @@
   "LazyHeaderNavListItem": {
     "description": "Auto imported from /components/HeaderNavListItem.vue"
   },
+  "HomePortfolio": {
+    "description": "Auto imported from /components/HomePortfolio.vue"
+  },
+  "LazyHomePortfolio": {
+    "description": "Auto imported from /components/HomePortfolio.vue"
+  },
+  "Recommend": {
+    "description": "Auto imported from /components/Recommend.vue"
+  },
+  "LazyRecommend": {
+    "description": "Auto imported from /components/Recommend.vue"
+  },
+  "RecommendCard": {
+    "description": "Auto imported from /components/RecommendCard.vue"
+  },
+  "LazyRecommendCard": {
+    "description": "Auto imported from /components/RecommendCard.vue"
+  },
   "ScrollamaExample": {
     "description": "Auto imported from /components/ScrollamaExample.vue"
   },
