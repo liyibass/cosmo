@@ -3,14 +3,15 @@
     class="nav-item"
     @mouseover="isHovered = true"
     @mouseleave="isHovered = false"
-    @click="goToPage(navItem)"
   >
-    <transition name="fast-fade" mode="out-in">
-      <span v-if="isHovered" key="1" class="nav-item__name">
-        {{ navItem.engName }}
-      </span>
-      <nobr v-else key="2" class="nav-item__name">{{ navItem.name }}</nobr>
-    </transition>
+    <div class="nav-item__container" @click="goToPage(navItem)">
+      <transition name="fast-fade" mode="out-in">
+        <span v-if="isHovered" key="1" class="nav-item__name">
+          {{ navItem.engName }}
+        </span>
+        <nobr v-else key="2" class="nav-item__name">{{ navItem.name }}</nobr>
+      </transition>
+    </div>
 
     <transition name="slide-fade" mode="in-out">
       <div v-if="navItem.list.length > 0 && isHovered" class="nav-item__list">
@@ -18,6 +19,7 @@
           v-for="navChild in navItem.list"
           :key="navChild.id"
           class="nav-item__list_item"
+          @click="goToPage(navChild)"
         >
           {{ navChild.name }}
         </div>
@@ -44,7 +46,6 @@ export default {
   },
   methods: {
     goToPage(navItem) {
-      console.log(navItem.link.length)
       if (navItem.link.length > 0) this.$router.push(navItem.link)
     },
   },
@@ -53,23 +54,33 @@ export default {
 
 <style lang="scss" scoped>
 .nav-item {
+  z-index: 0;
   position: relative;
-  padding: 15px 33px;
-  background: white;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  text-align: center;
   min-width: 50vw;
 
   // tablet range
   @include media-breakpoint-up(md) {
     width: calc(100% / 8);
     min-width: auto;
-    padding: 10px 10px;
   }
-  &:hover {
-    background: $color-grey;
+
+  &__container {
+    width: 100%;
+    position: relative;
+    padding: 15px 33px;
+    background: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    // tablet range
+    @include media-breakpoint-up(md) {
+      padding: 10px 10px;
+    }
+
+    &:hover {
+      background: $color-grey;
+    }
   }
 
   &__list {
@@ -88,10 +99,12 @@ export default {
     }
 
     &_item {
+      z-index: 1;
       text-align: center;
       padding: 10px 0;
       opacity: 0.8;
       font-size: 12px;
+      cursor: pointer;
       &:hover {
         background: $color-grey;
       }

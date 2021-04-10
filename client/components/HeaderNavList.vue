@@ -1,6 +1,11 @@
 <template>
   <div class="nav-list" :class="{ show: navIsOpen }">
-    <HeaderNavListItem v-for="nav in navList" :key="nav.id" :navItem="nav" />
+    <HeaderNavListItem
+      v-for="nav in navList"
+      :key="nav.id"
+      :navItem="nav"
+      @click.native="toggleNav"
+    />
   </div>
 </template>
 
@@ -35,6 +40,13 @@ export default {
         return false
       },
     },
+    toggleNav: {
+      type: Function,
+      isRequired: true,
+      default: () => {
+        return {}
+      },
+    },
   },
 }
 </script>
@@ -50,7 +62,7 @@ export default {
   justify-content: space-between;
   font-family: 'PingFang TC', sans-serif;
   background: white;
-  transform: translateX(100%);
+  transform: translateX(200%);
   transition: all 0.2s ease-in;
   &.show {
     transform: translateX(0);
@@ -62,7 +74,6 @@ export default {
     top: auto;
     right: 0;
     width: 100%;
-    height: 30px;
     flex-direction: row;
     transform: translateX(0);
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="about-page main-section page">
-    <div class="about-page__title main-title">關於井然</div>
+    <div id="info" class="about-page__title main-title">關於井然</div>
     <div class="about-page__info">
       <div class="about-page__info_image">
         <img :src="about.info.image.urlOriginal" :alt="about.info.image.name" />
@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <div class="about-page__title main-title">攝影師井然</div>
+    <div id="photographer" class="about-page__title main-title">攝影師井然</div>
     <div class="about-page__photographer">
       <div class="about-page__photographer_image">
         <img
@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <div class="about-page__title main-title">使用器材</div>
+    <div id="gear" class="about-page__title main-title">使用器材</div>
     <div class="about-page__gear">
       <div class="about-page__gear_image">
         <img :src="about.gear.image.urlOriginal" :alt="about.gear.image.name" />

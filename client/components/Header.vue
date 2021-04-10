@@ -3,7 +3,11 @@
     <div class="header__wrapper">
       <a class="header__logo" href="/">LOGO</a>
       <HeaderMetaList :metaList="metaList" />
-      <HeaderNavList :navList="navList" :navIsOpen="navIsOpen" />
+      <HeaderNavList
+        :navList="navList"
+        :navIsOpen="navIsOpen"
+        :toggleNav="toggleNav"
+      />
 
       <div class="header__icon" @click="toggleNav">
         <img :src="require('@/static/images/navLogo.svg')" alt="" />
@@ -42,11 +46,13 @@ export default {
               id: 0,
               name: '攝影師井然',
               engName: '',
+              link: '/about/#photographer',
             },
             {
               id: 1,
               name: '使用器材',
               engName: '',
+              link: '/about/#gear',
             },
           ],
         },
@@ -67,31 +73,37 @@ export default {
               id: 0,
               name: '婚禮攝影',
               engName: 'WEDDING',
+              link: '',
             },
             {
               id: 1,
               name: '自助婚紗',
               engName: 'PREWEDDING',
+              link: '',
             },
             {
               id: 2,
               name: '兒童親子寫真',
               engName: 'CHILDREN',
+              link: '',
             },
             {
               id: 3,
               name: '孕婦寫真',
               engName: 'PREGNANCY',
+              link: '',
             },
             {
               id: 4,
               name: '活動寫真',
               engName: 'ACITIVY',
+              link: '',
             },
             {
               id: 5,
               name: '寵物寫真',
               engName: 'PET PHOTO',
+              link: '',
             },
           ],
         },
@@ -112,21 +124,25 @@ export default {
               id: 0,
               name: 'FACEBOOK',
               engName: 'FACEBOOK',
+              link: '',
             },
             {
               id: 1,
               name: 'INSTEGRAM',
               engName: 'INSTEGRAM',
+              link: '',
             },
             {
               id: 2,
               name: 'PODCAST',
               engName: 'PODCAST',
+              link: '',
             },
             {
               id: 3,
               name: 'YOUTUBE',
               engName: 'YOUTUBE',
+              link: '',
             },
           ],
         },
@@ -149,26 +165,32 @@ export default {
         {
           id: 0,
           name: '婚紗婚禮攝影師',
+          link: '',
         },
         {
           id: 1,
           name: '美式婚禮推薦',
+          link: '',
         },
         {
           id: 2,
           name: '戶外婚禮推薦',
+          link: '',
         },
         {
           id: 3,
           name: '婚紗婚禮推薦',
+          link: '',
         },
         {
           id: 4,
           name: '海外婚紗',
+          link: '',
         },
         {
           id: 5,
           name: '2021婚禮紀錄推薦',
+          link: '',
         },
       ],
     }
