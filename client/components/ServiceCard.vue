@@ -55,9 +55,11 @@ export default {
   // desktop range
   @include media-breakpoint-up(xl) {
     width: calc((100% - 2 * 50px) / 3);
+    margin-bottom: 0;
   }
 
   &:last-child {
+    margin-bottom: 0;
     // tablet range
     @include media-breakpoint-up(md) {
       margin: auto;

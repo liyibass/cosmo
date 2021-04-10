@@ -41,9 +41,9 @@
     </div>
 
     <div class="footer__info">
-      <p>Copyright 井然婚攝</p>
+      <p>©Copyright 井然婚攝</p>
       <p>婚禮攝影｜婚禮紀錄｜婚禮推薦｜自助婚紗</p>
-      <p>-design by liyi</p>
+      <p>-design by Liyi</p>
     </div>
   </div>
 </template>

@@ -52,7 +52,7 @@ export default {
       const serviceScene = this.$scrollmagic
         .scene({
           triggerElement: serviceDOM,
-          triggerHook: 0.7,
+          triggerHook: 0.9,
           offset: 50,
           duration: '150%',
         })

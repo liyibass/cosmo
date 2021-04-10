@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio-card">
+  <div class="portfolio-card" @click="goToPortfolioPage">
     <div class="portfolio-card__cover">
       <img :src="portfolio.cover.urlOriginal" :alt="portfolio.name" />
       <div class="portfolio-card__cover_mask">
@@ -30,6 +30,11 @@ export default {
       },
     },
   },
+  methods: {
+    goToPortfolioPage() {
+      this.$router.push(`/portfolio/${this.portfolio.id}`)
+    },
+  },
 }
 </script>
 
@@ -54,11 +59,14 @@ export default {
 
   &__cover {
     position: relative;
+    overflow: hidden;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
+      transition: all 0.4s ease-in-out;
     }
 
     &_mask {
@@ -74,8 +82,13 @@ export default {
       align-items: center;
       justify-content: center;
       color: white;
+    }
 
-      &:hover {
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+      .portfolio-card__cover_mask {
         opacity: 1;
       }
     }

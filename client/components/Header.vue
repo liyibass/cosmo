@@ -72,7 +72,7 @@ export default {
           id: 2,
           name: '作品',
           engName: 'Portfolio',
-          link: '',
+          link: '/portfolio',
           list: [],
         },
         {
@@ -122,7 +122,7 @@ export default {
         {
           id: 4,
           name: '動態攝影',
-          engName: 'Home',
+          engName: 'Action',
           link: '',
           list: [],
         },

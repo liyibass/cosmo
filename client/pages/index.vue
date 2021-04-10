@@ -1,7 +1,7 @@
 <template>
   <div class="home-page page">
     <Slideshow />
-    <ChoicePortfolio />
+    <Portfolio :portfolioList="choicePortfolioList" />
     <Recommend />
     <Service />
   </div>
@@ -9,16 +9,76 @@
 
 <script>
 import Slideshow from '~/components/Slideshow'
-import ChoicePortfolio from '~/components/ChoicePortfolio'
+import Portfolio from '~/components/Portfolio'
 import Recommend from '~/components/Recommend'
 import Service from '~/components/Service'
 
 export default {
   components: {
     Slideshow,
-    ChoicePortfolio,
+    Portfolio,
     Recommend,
     Service,
+  },
+  data() {
+    return {
+      choicePortfolioList: [
+        {
+          id: 0,
+          name: '婚紗攝影1',
+          subTitle: '婚攝：井然',
+          cover: {
+            id: 0,
+            urlOriginal: require('@/static/images/choicePortfolio/portfolio01.jpg'),
+          },
+        },
+        {
+          id: 1,
+          name: '婚紗攝影2',
+          subTitle: '婚攝：井然',
+          cover: {
+            id: 0,
+            urlOriginal: require('@/static/images/choicePortfolio/portfolio02.jpg'),
+          },
+        },
+        {
+          id: 2,
+          name: '婚紗攝影3',
+          subTitle: '婚攝：井然',
+          cover: {
+            id: 0,
+            urlOriginal: require('@/static/images/choicePortfolio/portfolio03.jpg'),
+          },
+        },
+        {
+          id: 3,
+          name: '婚紗攝影4',
+          subTitle: '婚攝：井然',
+          cover: {
+            id: 0,
+            urlOriginal: require('@/static/images/choicePortfolio/portfolio04.jpg'),
+          },
+        },
+        {
+          id: 4,
+          name: '婚紗攝影5',
+          subTitle: '婚攝：井然',
+          cover: {
+            id: 0,
+            urlOriginal: require('@/static/images/choicePortfolio/portfolio05.jpg'),
+          },
+        },
+        {
+          id: 5,
+          name: '婚紗攝影6',
+          subTitle: '婚攝：井然',
+          cover: {
+            id: 0,
+            urlOriginal: require('@/static/images/choicePortfolio/portfolio06.jpg'),
+          },
+        },
+      ],
+    }
   },
 }
 </script>
