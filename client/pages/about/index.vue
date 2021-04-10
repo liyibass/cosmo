@@ -1,6 +1,7 @@
 <template>
   <div class="about-page main-section page">
-    <div id="info" class="about-page__title main-title">關於井然</div>
+    <div id="info" />
+    <div class="about-page__title main-title">關於井然</div>
     <div class="about-page__info">
       <div class="about-page__info_image">
         <img :src="about.info.image.urlOriginal" :alt="about.info.image.name" />
@@ -194,6 +195,12 @@ export default {
       line-height: 2;
       font-size: 14px;
     }
+  }
+
+  #info {
+    position: absolute;
+    top: -50px;
+    left: 0;
   }
 }
 </style>

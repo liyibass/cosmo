@@ -6,8 +6,8 @@ export const setScrollDirection = (vueComponent) => {
   document.addEventListener(
     'scroll',
     // 如果這邊用arrow函數的話 this會是undefined
-    debounce(function() {
-      let st = window.pageYOffset || document.documentElement.scrollTop // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+    debounce(function () {
+      const st = window.pageYOffset || document.documentElement.scrollTop // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
       if (st > lastScrollTop) {
         // downscroll code
         vueComponent.direction = 'down'

@@ -37,8 +37,7 @@ export default {
   padding: 0 49px;
   display: none;
   align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 10px;
+  justify-content: flex-end;
 
   // desktop range
   @include media-breakpoint-up(xl) {

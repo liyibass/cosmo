@@ -1,16 +1,20 @@
 <template>
   <div class="header">
-    <div class="header__wrapper">
-      <a class="header__logo" href="/">LOGO</a>
-      <HeaderMetaList :metaList="metaList" />
-      <HeaderNavList
-        :navList="navList"
-        :navIsOpen="navIsOpen"
-        :toggleNav="toggleNav"
-      />
+    <div class="header__wrapper" :style="showNavInMobile">
+      <div class="header__container">
+        <div class="header__upper">
+          <a class="header__logo" href="/">LOGO</a>
+          <HeaderMetaList :metaList="metaList" />
+        </div>
+        <HeaderNavList
+          :navList="navList"
+          :navIsOpen="navIsOpen"
+          :toggleNav="toggleNav"
+        />
 
-      <div class="header__icon" @click="toggleNav">
-        <img :src="require('@/static/images/navLogo.svg')" alt="" />
+        <div class="header__icon" @click="toggleNav">
+          <img :src="require('@/static/images/navLogo.svg')" alt="" />
+        </div>
       </div>
     </div>
   </div>
@@ -19,6 +23,7 @@
 <script>
 import HeaderMetaList from '~/components/HeaderMetaList'
 import HeaderNavList from '~/components/HeaderNavList'
+import { setScrollDirection } from '~/utils/getScrollDirection'
 
 export default {
   component: {
@@ -28,6 +33,7 @@ export default {
   data() {
     return {
       navIsOpen: false,
+      direction: 'up',
       navList: [
         {
           id: 0,
@@ -40,7 +46,7 @@ export default {
           id: 1,
           name: '關於井然',
           engName: 'About',
-          link: '/about',
+          link: '/about/#info',
           list: [
             {
               id: 0,
@@ -195,31 +201,60 @@ export default {
       ],
     }
   },
+  computed: {
+    showNavInMobile() {
+      if (this.direction === 'down') {
+        return { top: '-200px' }
+      } else if (this.direction === 'down') {
+        return { top: '0px' }
+      } else {
+        return { top: '0px' }
+      }
+    },
+  },
+  mounted() {
+    setScrollDirection(this)
+    this.isWindowIsTop()
+  },
   methods: {
     toggleNav() {
       this.navIsOpen = !this.navIsOpen
     },
+    isWindowIsTop() {},
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .header {
+  position: relative;
   z-index: 900;
   width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 10px 30px;
-  background: white;
+  height: 90px;
 
   // tablet range
   @include media-breakpoint-up(md) {
-    position: relative;
+    height: 134px;
   }
 
   &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 30px;
+    background: white;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__container {
     position: relative;
+  }
+
+  &__upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__logo {
