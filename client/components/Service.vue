@@ -48,18 +48,29 @@ export default {
 <style lang="scss" scoped>
 .service {
   background: white;
-  padding: 30px 0 80px;
+  padding: 30px 30px 80px;
   &__title {
     text-align: center;
     font-size: 25px;
     margin: 0 auto 35px;
   }
   &__container {
-    max-width: 850px;
+    max-width: 100%;
     margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    // tablet range
+    @include media-breakpoint-up(md) {
+      max-width: 650px;
+    }
+
+    // desktop range
+    @include media-breakpoint-up(xl) {
+      max-width: 1000px;
+    }
   }
 }
 </style>

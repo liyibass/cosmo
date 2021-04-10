@@ -29,16 +29,27 @@ export default {
 <style lang="scss" scoped>
 .service-card {
   position: relative;
-  width: calc((100% - 2 * 50px) / 3);
+  width: 100%;
   height: 300px;
   background: $color-grey;
   padding: 40px 23px 23px 23px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 5px;
   transform: translateY(10px);
   transition: all 0.2s ease-in;
+
+  // tablet range
+  @include media-breakpoint-up(md) {
+    width: calc((100% - 2 * 20px) / 2);
+  }
+
+  // desktop range
+  @include media-breakpoint-up(xl) {
+    width: calc((100% - 2 * 50px) / 3);
+  }
 
   &__icon {
     width: 40px;

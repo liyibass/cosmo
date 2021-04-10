@@ -8,6 +8,7 @@ export default {}
 
 <style lang="scss" scoped>
 .home-portfolio {
+  width: 100%;
   background: white;
   height: 50vh;
 }

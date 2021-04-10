@@ -21,13 +21,27 @@ export default {
 
 <style lang="scss" scoped>
 .recommend-card {
-  width: 600px;
-  height: 300px;
+  margin: 0 20px;
+  width: calc(100% - 40px);
+  max-width: 400px;
+  height: 200px;
   background: rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+
+  // tablet range
+  @include media-breakpoint-up(md) {
+    width: 500px;
+    height: 250px;
+  }
+
+  // desktop range
+  @include media-breakpoint-up(xl) {
+    width: 600px;
+    height: 300px;
+  }
 
   &__title {
     font-size: 20px;

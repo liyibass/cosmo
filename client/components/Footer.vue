@@ -62,19 +62,44 @@ export default {
 <style lang="scss" scoped>
 .footer {
   background: $color-main-light-gray;
+  width: 100%;
   &__card_container {
-    height: 350px;
     display: flex;
     flex-direction: row;
     justify-content: stretch;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: auto;
+
+    // tablet range
+    @include media-breakpoint-up(md) {
+      max-width: 800px;
+    }
+
+    // desktop range
+    @include media-breakpoint-up(xl) {
+      max-width: 1100px;
+    }
   }
 
   &__card {
-    flex: 1;
-    padding: 20px 24px;
+    width: 100%;
+    padding: 20px 44px;
     margin: 12px 12px 0;
     color: $color-main-dark-gray;
     background: white;
+
+    // tablet range
+    @include media-breakpoint-up(md) {
+      //   flex: 1;
+      width: calc((100% - 48px) / 2);
+      padding: 20px 24px;
+    }
+
+    // desktop range
+    @include media-breakpoint-up(xl) {
+      width: calc((100% - 96px) / 4);
+    }
 
     &_title {
       font-weight: 500;
@@ -89,7 +114,7 @@ export default {
   }
 
   &__info {
-    width: 500px;
+    max-width: 500px;
     margin: auto;
     padding: 30px 0;
     text-align: center;

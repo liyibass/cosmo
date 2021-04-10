@@ -54,6 +54,8 @@ export default {
 
 <style lang="scss" scoped>
 .slideshow {
+  width: 100vw;
+  overflow: hidden;
   &__image {
     width: 100%;
     height: 100vh;

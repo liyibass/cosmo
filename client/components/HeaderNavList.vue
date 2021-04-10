@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-list">
+  <div class="nav-list" :class="{ show: navIsOpen }">
     <HeaderNavListItem v-for="nav in navList" :key="nav.id" :navItem="nav" />
   </div>
 </template>
@@ -28,18 +28,50 @@ export default {
         ]
       },
     },
+    navIsOpen: {
+      type: Boolean,
+      isRequired: true,
+      default: () => {
+        return false
+      },
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .nav-list {
-  width: 100%;
-  height: 30px;
+  position: fixed;
+  top: 90px;
+  right: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   font-family: 'PingFang TC', sans-serif;
+  background: white;
+  transform: translateX(100%);
+  transition: all 0.2s ease-in;
+  &.show {
+    transform: translateX(0);
+  }
+
+  // tablet range
+  @include media-breakpoint-up(md) {
+    position: relative;
+    top: auto;
+    right: 0;
+    width: 100%;
+    height: 30px;
+    flex-direction: row;
+    transform: translateX(0);
+  }
+
+  // desktop range
+  @include media-breakpoint-up(xl) {
+    font-family: 'PingFang TC', sans-serif;
+  }
+
   &__item {
     padding: 0;
     font-size: 14px;

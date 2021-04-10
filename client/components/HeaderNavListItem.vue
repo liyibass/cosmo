@@ -47,23 +47,39 @@ export default {
 <style lang="scss" scoped>
 .nav-item {
   position: relative;
-  width: calc(100% / 8);
-  padding: 10px 33px;
+  padding: 15px 33px;
   background: white;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   text-align: center;
+  min-width: 50vw;
+
+  // tablet range
+  @include media-breakpoint-up(md) {
+    width: calc(100% / 8);
+    min-width: auto;
+    padding: 10px 10px;
+  }
   &:hover {
     background: $color-grey;
   }
 
   &__list {
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
+    top: 0;
+    left: -100%;
+    min-width: 50vw;
     background: white;
+
+    // tablet range
+    @include media-breakpoint-up(md) {
+      top: 100%;
+      left: 0;
+      min-width: auto;
+      width: 100%;
+    }
+
     &_item {
       text-align: center;
       padding: 10px 0;

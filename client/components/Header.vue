@@ -3,7 +3,11 @@
     <div class="header__wrapper">
       <div class="header__logo">LOGO</div>
       <HeaderMetaList :metaList="metaList" />
-      <HeaderNavList :navList="navList" />
+      <HeaderNavList :navList="navList" :navIsOpen="navIsOpen" />
+
+      <div class="header__icon" @click="toggleNav">
+        <img :src="require('@/static/images/navLogo.svg')" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -19,6 +23,7 @@ export default {
   },
   data() {
     return {
+      navIsOpen: false,
       navList: [
         {
           id: 0,
@@ -168,14 +173,32 @@ export default {
       ],
     }
   },
+  methods: {
+    toggleNav() {
+      this.navIsOpen = !this.navIsOpen
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 .header {
   z-index: 900;
-  position: relative;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
   padding: 10px 30px;
+  background: white;
+
+  // tablet range
+  @include media-breakpoint-up(md) {
+    position: relative;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
 
   &__logo {
     width: 160px;
@@ -184,6 +207,26 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    // tablet range
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 </style>

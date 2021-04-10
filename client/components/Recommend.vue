@@ -28,6 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 .recommend {
+  width: 100%;
   background: url('~static/images/recommend.jpg');
   background-position: center;
   background-size: cover;

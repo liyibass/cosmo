@@ -35,10 +35,15 @@ export default {
   height: 30px;
   background: white;
   padding: 0 49px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 10px;
+
+  // desktop range
+  @include media-breakpoint-up(xl) {
+    display: flex;
+  }
   &__item {
     padding: 0 9px;
     font-family: 'PingFang TC', sans-serif;
