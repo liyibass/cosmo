@@ -51,6 +51,18 @@ export default {
     width: calc((100% - 2 * 50px) / 3);
   }
 
+  &:last-child {
+    // tablet range
+    @include media-breakpoint-up(md) {
+      margin: auto;
+    }
+
+    // desktop range
+    @include media-breakpoint-up(xl) {
+      margin: initial;
+    }
+  }
+
   &__icon {
     width: 40px;
     height: 40px;

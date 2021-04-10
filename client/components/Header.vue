@@ -222,6 +222,7 @@ export default {
     @include media-breakpoint-up(md) {
       display: none;
     }
+
     img {
       width: 100%;
       height: 100%;

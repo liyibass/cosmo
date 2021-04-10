@@ -21,26 +21,34 @@ export default {
 
 <style lang="scss" scoped>
 .recommend-card {
+  z-index: 2;
   margin: 0 20px;
   width: calc(100% - 40px);
   max-width: 400px;
   height: 200px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  border-radius: 5px;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+  &.reveal {
+    transform: scale(1);
+  }
 
   // tablet range
   @include media-breakpoint-up(md) {
     width: 500px;
     height: 250px;
+    max-width: none;
   }
 
   // desktop range
   @include media-breakpoint-up(xl) {
-    width: 600px;
-    height: 300px;
+    width: 800px;
+    height: 400px;
   }
 
   &__title {
