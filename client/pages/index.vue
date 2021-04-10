@@ -1,7 +1,7 @@
 <template>
   <div class="homepage">
     <Slideshow />
-    <HomePortfolio />
+    <ChoicePortfolio />
     <Recommend />
     <Service />
   </div>
@@ -9,14 +9,14 @@
 
 <script>
 import Slideshow from '~/components/Slideshow'
-import HomePortfolio from '~/components/HomePortfolio'
+import ChoicePortfolio from '~/components/ChoicePortfolio'
 import Recommend from '~/components/Recommend'
 import Service from '~/components/Service'
 
 export default {
   components: {
     Slideshow,
-    HomePortfolio,
+    ChoicePortfolio,
     Recommend,
     Service,
   },

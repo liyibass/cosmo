@@ -1,4 +1,16 @@
 {
+  "ChoicePortfolio": {
+    "description": "Auto imported from /components/ChoicePortfolio.vue"
+  },
+  "LazyChoicePortfolio": {
+    "description": "Auto imported from /components/ChoicePortfolio.vue"
+  },
+  "ChoicePortfolioCard": {
+    "description": "Auto imported from /components/ChoicePortfolioCard.vue"
+  },
+  "LazyChoicePortfolioCard": {
+    "description": "Auto imported from /components/ChoicePortfolioCard.vue"
+  },
   "Footer": {
     "description": "Auto imported from /components/Footer.vue"
   },
@@ -28,12 +40,6 @@
   },
   "LazyHeaderNavListItem": {
     "description": "Auto imported from /components/HeaderNavListItem.vue"
-  },
-  "HomePortfolio": {
-    "description": "Auto imported from /components/HomePortfolio.vue"
-  },
-  "LazyHomePortfolio": {
-    "description": "Auto imported from /components/HomePortfolio.vue"
   },
   "Recommend": {
     "description": "Auto imported from /components/Recommend.vue"

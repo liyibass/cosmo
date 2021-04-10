@@ -1,6 +1,6 @@
 <template>
-  <div class="service">
-    <div class="service__title">服務項目</div>
+  <div class="service main-section">
+    <div class="service__title main-title">服務項目</div>
     <div class="service__container">
       <ServiceCard
         v-for="service in serviceList"
@@ -47,13 +47,6 @@ export default {
 
 <style lang="scss" scoped>
 .service {
-  background: white;
-  padding: 30px 30px 80px;
-  &__title {
-    text-align: center;
-    font-size: 25px;
-    margin: 0 auto 35px;
-  }
   &__container {
     max-width: 100%;
     margin: auto;

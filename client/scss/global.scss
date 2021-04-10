@@ -14,6 +14,21 @@
   }
 }
 
+.main-section {
+  padding: 30px 10px 80px;
+
+  // tablet range
+  @include media-breakpoint-up(md) {
+    padding: 30px 30px 80px;
+  }
+}
+
+.main-title {
+  text-align: center;
+  font-size: 25px;
+  margin: 0 auto 35px;
+}
+
 .slide-fade-enter-active {
   transition: all 0.8s ease;
 }
