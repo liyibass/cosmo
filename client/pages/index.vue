@@ -1,5 +1,5 @@
 <template>
-  <div class="homepage">
+  <div class="home-page page">
     <Slideshow />
     <ChoicePortfolio />
     <Recommend />
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.homepage {
-  font-size: 1rem;
+.home-page {
+  background: white;
 }
 </style>

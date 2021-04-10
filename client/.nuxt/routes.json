@@ -1,5 +1,12 @@
 [
   {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/mac/Documents/LiyiCoding/cosmo/client/pages/about/index.vue",
+    "chunkName": "pages/about/index",
+    "_name": "_9ac24fc0"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/mac/Documents/LiyiCoding/cosmo/client/pages/index.vue",

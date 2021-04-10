@@ -3,6 +3,7 @@
     class="nav-item"
     @mouseover="isHovered = true"
     @mouseleave="isHovered = false"
+    @click="goToPage(navItem)"
   >
     <transition name="fast-fade" mode="out-in">
       <span v-if="isHovered" key="1" class="nav-item__name">
@@ -40,6 +41,12 @@ export default {
     return {
       isHovered: false,
     }
+  },
+  methods: {
+    goToPage(navItem) {
+      console.log(navItem.link.length)
+      if (navItem.link.length > 0) this.$router.push(navItem.link)
+    },
   },
 }
 </script>

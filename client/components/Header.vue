@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="header__wrapper">
-      <div class="header__logo">LOGO</div>
+      <a class="header__logo" href="/">LOGO</a>
       <HeaderMetaList :metaList="metaList" />
       <HeaderNavList :navList="navList" :navIsOpen="navIsOpen" />
 
@@ -36,7 +36,7 @@ export default {
           id: 1,
           name: '關於井然',
           engName: 'About',
-          link: '/',
+          link: '/about',
           list: [
             {
               id: 0,
@@ -54,14 +54,14 @@ export default {
           id: 2,
           name: '作品',
           engName: 'Portfolio',
-          link: '/',
+          link: '',
           list: [],
         },
         {
           id: 3,
           name: '攝影服務',
           engName: 'Service',
-          link: '/',
+          link: '',
           list: [
             {
               id: 0,
@@ -99,14 +99,14 @@ export default {
           id: 4,
           name: '動態攝影',
           engName: 'Home',
-          link: '/',
+          link: '',
           list: [],
         },
         {
           id: 5,
           name: '其他社群',
           engName: 'Social',
-          link: '/',
+          link: '',
           list: [
             {
               id: 0,
@@ -134,14 +134,14 @@ export default {
           id: 6,
           name: '部落格',
           engName: 'Blog',
-          link: '/',
+          link: '',
           list: [],
         },
         {
           id: 7,
           name: '檔期預約',
           engName: 'Booking',
-          link: '/',
+          link: '',
           list: [],
         },
       ],
