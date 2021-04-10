@@ -60,8 +60,9 @@ export default {
 <style lang="scss" scoped>
 .recommend {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 300vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,7 +99,12 @@ export default {
   }
   &__background_top {
     z-index: 1;
-    transform: scale(0.8);
+    transform: scale(0.9);
+
+    // tablet range
+    @include media-breakpoint-up(md) {
+      transform: scale(0.8);
+    }
   }
 }
 </style>

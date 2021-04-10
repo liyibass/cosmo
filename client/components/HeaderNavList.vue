@@ -4,7 +4,7 @@
       v-for="nav in navList"
       :key="nav.id"
       :navItem="nav"
-      @click.native="toggleNav"
+      :toggleNav="toggleNav"
     />
   </div>
 </template>

@@ -46,16 +46,22 @@ export default {
           id: 1,
           name: '關於井然',
           engName: 'About',
-          link: '/about/#info',
+          link: '',
           list: [
             {
               id: 0,
+              name: '關於',
+              engName: '',
+              link: '/about/#info',
+            },
+            {
+              id: 1,
               name: '攝影師井然',
               engName: '',
               link: '/about/#photographer',
             },
             {
-              id: 1,
+              id: 2,
               name: '使用器材',
               engName: '',
               link: '/about/#gear',

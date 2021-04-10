@@ -42,6 +42,34 @@ export default {
       ],
     }
   },
+  mounted() {
+    const serviceListDOM = document.querySelectorAll('.service-card')
+    const sceneArray = []
+
+    for (let i = 0; i < serviceListDOM.length; i++) {
+      const serviceDOM = serviceListDOM[i]
+
+      const serviceScene = this.$scrollmagic
+        .scene({
+          triggerElement: serviceDOM,
+          triggerHook: 0.7,
+          offset: 50,
+          duration: '150%',
+        })
+        .setClassToggle(serviceDOM, 'reveal') // add class to recommendDOM
+        // .addIndicators() // add indicators (requires plugin)
+        .on('enter', () => {})
+
+        .on('leave', () => {})
+
+        .on('progress', (e) => {})
+      // .addIndicators({ name: 'workflowScene' })
+
+      sceneArray.push(serviceScene)
+    }
+
+    this.$scrollmagic.addScene(sceneArray)
+  },
 }
 </script>
 

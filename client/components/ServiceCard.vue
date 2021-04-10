@@ -33,13 +33,19 @@ export default {
   height: 300px;
   background: $color-grey;
   padding: 40px 23px 23px 23px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 5px;
-  transform: translateY(10px);
+  transform: translateY(50px) scale(0.7);
+  opacity: 0.3;
   transition: all 0.2s ease-in;
+  &.reveal {
+    animation-name: rotateFade;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+  }
 
   // tablet range
   @include media-breakpoint-up(md) {
@@ -100,6 +106,21 @@ export default {
   }
   &__content {
     font-size: 14px;
+  }
+}
+
+@keyframes rotateFade {
+  0% {
+    transform: translateY(50px) scale(0.7);
+    opacity: 0.3;
+  }
+
+  30% {
+    transform: translateY(-20px) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(10px);
   }
 }
 </style>

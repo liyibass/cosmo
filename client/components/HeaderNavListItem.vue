@@ -38,6 +38,13 @@ export default {
         return {}
       },
     },
+    toggleNav: {
+      type: Function,
+      isRequired: true,
+      default: () => {
+        return {}
+      },
+    },
   },
   data() {
     return {
@@ -46,7 +53,10 @@ export default {
   },
   methods: {
     goToPage(navItem) {
-      if (navItem.link.length > 0) this.$router.push(navItem.link)
+      if (navItem.link.length > 0) {
+        this.toggleNav()
+        this.$router.push(navItem.link)
+      }
     },
   },
 }
