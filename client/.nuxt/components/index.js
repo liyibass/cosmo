@@ -7,6 +7,8 @@ export { default as HomePortfolio } from '../../components/HomePortfolio.vue'
 export { default as Recommend } from '../../components/Recommend.vue'
 export { default as RecommendCard } from '../../components/RecommendCard.vue'
 export { default as ScrollamaExample } from '../../components/ScrollamaExample.vue'
+export { default as Service } from '../../components/Service.vue'
+export { default as ServiceCard } from '../../components/ServiceCard.vue'
 export { default as Slideshow } from '../../components/Slideshow.vue'
 
 export const LazyFooter = import('../../components/Footer.vue' /* webpackChunkName: "components/footer" */).then(c => c.default || c)
@@ -18,4 +20,6 @@ export const LazyHomePortfolio = import('../../components/HomePortfolio.vue' /* 
 export const LazyRecommend = import('../../components/Recommend.vue' /* webpackChunkName: "components/recommend" */).then(c => c.default || c)
 export const LazyRecommendCard = import('../../components/RecommendCard.vue' /* webpackChunkName: "components/recommend-card" */).then(c => c.default || c)
 export const LazyScrollamaExample = import('../../components/ScrollamaExample.vue' /* webpackChunkName: "components/scrollama-example" */).then(c => c.default || c)
+export const LazyService = import('../../components/Service.vue' /* webpackChunkName: "components/service" */).then(c => c.default || c)
+export const LazyServiceCard = import('../../components/ServiceCard.vue' /* webpackChunkName: "components/service-card" */).then(c => c.default || c)
 export const LazySlideshow = import('../../components/Slideshow.vue' /* webpackChunkName: "components/slideshow" */).then(c => c.default || c)

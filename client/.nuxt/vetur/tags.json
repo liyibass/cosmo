@@ -53,6 +53,18 @@
   "LazyScrollamaExample": {
     "description": "Auto imported from /components/ScrollamaExample.vue"
   },
+  "Service": {
+    "description": "Auto imported from /components/Service.vue"
+  },
+  "LazyService": {
+    "description": "Auto imported from /components/Service.vue"
+  },
+  "ServiceCard": {
+    "description": "Auto imported from /components/ServiceCard.vue"
+  },
+  "LazyServiceCard": {
+    "description": "Auto imported from /components/ServiceCard.vue"
+  },
   "Slideshow": {
     "description": "Auto imported from /components/Slideshow.vue"
   },
