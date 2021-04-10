@@ -1,13 +1,14 @@
 <template>
   <div class="home-page page">
     <Slideshow />
-    <Portfolio :portfolioList="choicePortfolioList" />
+    <Portfolio :portfolioList="getEditorChoicePortfolios" />
     <Recommend />
     <Service />
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Slideshow from '~/components/Slideshow'
 import Portfolio from '~/components/Portfolio'
 import Recommend from '~/components/Recommend'
@@ -79,6 +80,12 @@ export default {
         },
       ],
     }
+  },
+  computed: {
+    ...mapGetters('portfolios', [
+      'getEditorChoicePortfolios',
+      // Here you can import other getters from the products.js
+    ]),
   },
 }
 </script>
