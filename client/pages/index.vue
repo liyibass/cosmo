@@ -1,6 +1,6 @@
 <template>
   <div class="home-page page">
-    <Slideshow />
+    <Slideshow :slideShowList="slideShowList" />
     <Portfolio :portfolioList="getEditorChoicePortfolios" />
     <Recommend />
     <Service />
@@ -23,60 +23,21 @@ export default {
   },
   data() {
     return {
-      choicePortfolioList: [
+      slideShowList: [
         {
           id: 0,
-          name: '婚紗攝影1',
-          subTitle: '婚攝：井然',
-          cover: {
-            id: 0,
-            urlOriginal: require('@/static/images/choicePortfolio/portfolio01.jpg'),
-          },
+          name: '',
+          urlOriginal: require('@/static/images/slideshow/001.jpg'),
         },
         {
           id: 1,
-          name: '婚紗攝影2',
-          subTitle: '婚攝：井然',
-          cover: {
-            id: 0,
-            urlOriginal: require('@/static/images/choicePortfolio/portfolio02.jpg'),
-          },
+          name: '',
+          urlOriginal: require('@/static/images/slideshow/002.jpg'),
         },
         {
           id: 2,
-          name: '婚紗攝影3',
-          subTitle: '婚攝：井然',
-          cover: {
-            id: 0,
-            urlOriginal: require('@/static/images/choicePortfolio/portfolio03.jpg'),
-          },
-        },
-        {
-          id: 3,
-          name: '婚紗攝影4',
-          subTitle: '婚攝：井然',
-          cover: {
-            id: 0,
-            urlOriginal: require('@/static/images/choicePortfolio/portfolio04.jpg'),
-          },
-        },
-        {
-          id: 4,
-          name: '婚紗攝影5',
-          subTitle: '婚攝：井然',
-          cover: {
-            id: 0,
-            urlOriginal: require('@/static/images/choicePortfolio/portfolio05.jpg'),
-          },
-        },
-        {
-          id: 5,
-          name: '婚紗攝影6',
-          subTitle: '婚攝：井然',
-          cover: {
-            id: 0,
-            urlOriginal: require('@/static/images/choicePortfolio/portfolio06.jpg'),
-          },
+          name: '',
+          urlOriginal: require('@/static/images/slideshow/003.jpg'),
         },
       ],
     }

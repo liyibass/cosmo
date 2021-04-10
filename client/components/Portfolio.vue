@@ -29,28 +29,34 @@ export default {
             id: 0,
             name: '婚紗攝影1',
             subTitle: '婚攝：井然',
-            cover: {
-              id: 0,
-              urlOriginal: require('@/static/images/choicePortfolio/portfolio01.jpg'),
-            },
+            cover: [
+              {
+                id: 0,
+                urlOriginal: require('@/static/images/choicePortfolio/portfolio01.jpg'),
+              },
+            ],
           },
           {
             id: 1,
             name: '婚紗攝影2',
             subTitle: '婚攝：井然',
-            cover: {
-              id: 0,
-              urlOriginal: require('@/static/images/choicePortfolio/portfolio02.jpg'),
-            },
+            cover: [
+              {
+                id: 0,
+                urlOriginal: require('@/static/images/choicePortfolio/portfolio02.jpg'),
+              },
+            ],
           },
           {
             id: 2,
             name: '婚紗攝影3',
             subTitle: '婚攝：井然',
-            cover: {
-              id: 0,
-              urlOriginal: require('@/static/images/choicePortfolio/portfolio03.jpg'),
-            },
+            cover: [
+              {
+                id: 0,
+                urlOriginal: require('@/static/images/choicePortfolio/portfolio03.jpg'),
+              },
+            ],
           },
         ]
       },

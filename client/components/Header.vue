@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="header__wrapper" :style="showNavInMobile">
+    <div class="header__wrapper" :class="showNavHandler">
       <div class="header__container">
         <div class="header__upper">
           <a class="header__logo" href="/">LOGO</a>
@@ -208,13 +208,17 @@ export default {
     }
   },
   computed: {
-    showNavInMobile() {
+    showNavHandler() {
       if (this.direction === 'down') {
-        return { top: '-200px' }
-      } else if (this.direction === 'down') {
-        return { top: '0px' }
+        // return { top: '-200px' }
+        return 'hide-all'
+      } else if (this.direction === 'up') {
+        // return { top: '-65px' }
+        return 'show-half'
       } else {
-        return { top: '0px' }
+        return 'show-all'
+
+        // return { top: '0px' }
       }
     },
   },
@@ -251,6 +255,20 @@ export default {
     padding: 10px 30px;
     background: white;
     transition: all 0.5s ease-in-out;
+
+    &.show-all {
+      top: 0;
+    }
+    &.hide-all {
+      top: -200px;
+    }
+    &.show-half {
+      top: -0;
+      // tablet range
+      @include media-breakpoint-up(md) {
+        top: -65px;
+      }
+    }
   }
 
   &__container {

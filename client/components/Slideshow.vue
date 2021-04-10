@@ -4,7 +4,7 @@
       :perPage="1"
       centerMode
       :loop="true"
-      :paginationEnabled="true"
+      :paginationEnabled="showPagination"
       paginationPosition="bottom-overlay"
       :paginationSize="10"
       paginationColor="#dddedf"
@@ -13,7 +13,7 @@
       <slide v-for="image in slideShowList" :key="image.id">
         {{ image.name }}
         <div class="slideshow__image">
-          <img :src="image.urlDesktop" alt="" />
+          <img :src="image.urlOriginal" alt="" />
         </div>
       </slide>
     </carousel>
@@ -28,33 +28,34 @@ export default {
     Carousel,
     Slide,
   },
+  props: {
+    slideShowList: {
+      type: Array,
+      isRequired: true,
+      default: () => {
+        return [
+          {
+            id: 0,
+            urlOriginal: require('@/static/images/choicePortfolio/portfolio01.jpg'),
+          },
+        ]
+      },
+    },
+  },
   data() {
-    return {
-      slideShowList: [
-        {
-          id: 0,
-          name: '',
-          urlDesktop: require('@/static/images/slideshow/001.jpg'),
-        },
-        {
-          id: 1,
-          name: '',
-          urlDesktop: require('@/static/images/slideshow/002.jpg'),
-        },
-        {
-          id: 2,
-          name: '',
-          urlDesktop: require('@/static/images/slideshow/003.jpg'),
-        },
-      ],
-    }
+    return {}
+  },
+  computed: {
+    showPagination() {
+      return this.slideShowList.length > 1
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .slideshow {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   &__image {
     width: 100%;

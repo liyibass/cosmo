@@ -1,7 +1,7 @@
 <template>
   <div class="portfolio-card" @click="goToPortfolioPage">
     <div class="portfolio-card__cover">
-      <img :src="portfolio.cover.urlOriginal" :alt="portfolio.name" />
+      <img :src="portfolio.cover[0].urlOriginal" :alt="portfolio.name" />
       <div class="portfolio-card__cover_mask">
         {{ portfolio.name }}
       </div>
